@@ -1,0 +1,35 @@
+
+<html lang="en">
+
+
+<body>
+          {% if partage == 0 %}
+            <strike>{{task}}</strike>
+            {% else %}
+            <span>{{task}}</span>
+        {% endif %}
+   
+               <h2>{{ title }}</h2>
+                 <ul class="list-group">
+                    {% for movie in movies %}
+                    <li class="list-group-item">{{ movie }}</li>
+                    {% endfor %}
+                </ul>
+    
+ 
+    
+
+
+
+    
+
+
+
+
+
+
+
+    
+</body>
+
+</html>

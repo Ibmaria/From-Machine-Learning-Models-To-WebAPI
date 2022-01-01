@@ -1,0 +1,83 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/alexcbs/image/upload/v1546012692/200px-Map_marker_font_awesome.svg_sspu3y.png" async defer/>
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="{% static 'movie/css/movie.css' %}" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js" integrity="sha256-VBLiveTKyUZMEzJd6z2mhfxIqz3ZATCuVMawPZGzIfA=" crossorigin="anonymous"></script>
+    
+
+
+    <title>Movie recommadation</title>
+</head>
+
+
+<body>
+
+     <div class="hero lazyload" >
+        <div class="hero__wrap">
+            <div class="hero__categories"> <a class="label">Machine
+                            Learning</a> </div>
+            <h1 class="hero__title">Online Movie Recommendation System</h1>
+            <p class="hero__meta"> <span> <time>2020</time> </span></p>
+                    <a href="https://github.com/Ibmaria/movie_recommadation_engine/blob/master/movie_model_training.ipynb" class="btn" target="_blank">GitHub Repository</a>
+        </div>
+
+    </div>
+   
+ 
+    <div class="container">
+         <p>
+                Writing the title(English) of your favourite movie in the box below and
+                pressing Get 10 movies, the recommendation engine will recommend you 10 movies.For better accuracy search it on wikipedia and paste the title in the box. <br />
+
+         </p>
+             <form  method="post" action="">
+                {% csrf_token %}
+                {{ form.title }}
+                <input type="submit" class="btn btn-primary" value="Get 10 Movies">
+
+              </form>
+            {% if not sent %}
+                     <center><h3>{{ res }}</h3></center>
+            {% else %}
+                    <center> <h3>Movie Recommadation for {{ title|title }}</h3></center>
+                            <ul class="list-group">
+                                {% for movie in movies %}
+                                    <li class="list-group-item light ">{{ movie|title }}</li>
+                                {% endfor %}
+                            </ul>
+    
+
+          
+            {% endif %}
+              
+
+        
+      
+        
+    </div>
+  
+        
+
+
+
+
+
+    
+</body>
+
+</html>

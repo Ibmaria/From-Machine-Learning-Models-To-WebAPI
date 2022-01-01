@@ -1,0 +1,113 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/alexcbs/image/upload/v1546012692/200px-Map_marker_font_awesome.svg_sspu3y.png" async defer/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="{% static 'movie/css/spam.css' %}" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js" integrity="sha256-VBLiveTKyUZMEzJd6z2mhfxIqz3ZATCuVMawPZGzIfA=" crossorigin="anonymous"></script>
+    
+
+
+    <title>Spam detector</title>
+</head>
+
+
+<body>
+
+     <div class="hero lazyload">
+        <div class="hero__wrap">
+            <div class="hero__categories"> <a class="label">Machine
+                            Learning</a> </div>
+            <h1 class="hero__title">Spam Detector</h1>
+            <p class="hero__meta"> <span> <time>2020</time> </span></p>
+                    <a href="https://github.com/Ibmaria/movie_recommadation_engine/blob/master/training_spam.ipynb" class="btn" target="_blank">GitHub Repository</a>
+        </div>
+
+    </div>
+
+ 
+    <div class="container">
+      
+            
+             <p>Enter Your Message Here</p>
+
+            <textarea id="message" rows="4" cols="50"></textarea>
+            <br/>
+
+            <input type="submit" class="btn-info" value="predict" id="spam">
+        
+            
+            <br/>
+            <br />
+
+            <div id="spam_wraper">
+                <div class="alert alert-primary" role="alert" id="spamtext"></div>
+        
+            </div>
+        
+    
+    </div>
+    <script type="text/javascript">
+        
+       
+            $("#spam").click(function(){
+                
+                $.ajax({
+                    type: "POST",
+                    url:'{% url "predict_spam" %}',
+
+                    data: {
+                        
+                        'message' : $("#message").val(),
+                        
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    
+                        
+                    
+                },
+                    success: function(json){
+                        
+                        $('#spamtext').text(json['result'])
+
+                    
+                        
+                    }
+            
+                
+                
+
+                 })
+                 
+                });
+
+
+       
+       </script>
+
+
+    
+
+
+
+
+
+
+
+    
+</body>
+
+</html>
