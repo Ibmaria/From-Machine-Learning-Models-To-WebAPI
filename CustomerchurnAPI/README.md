@@ -1,7 +1,8 @@
 # Author Ibrahim Koné 
-# Image Classification Restful Api
+# Customer Churn Restful Api
 
-An Image Classification Restful Api .
+Customer Churn Restful Api
+
 
 <br />
 
@@ -9,8 +10,8 @@ An Image Classification Restful Api .
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/Ibmaria/Image-Classification-Web-Apps.git
-$ cd Image-Classification-Web-Apps/ImageRestApi
+$ git clone https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI.git
+$ cd From-Machine-Learning-Models-To-WebAPI/CustomerchurnAPI/web
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
@@ -22,31 +23,29 @@ $ # .\env\Scripts\activate
 $
 $ # Install modules - SQLite Storage
 $ pip3 install -r requirements.txt or pip install -r requirements.txt
-$
-$ # Create tables
-$ python manage.py makemigrations
-$ python manage.py migrate
-$
+
 $ # Start the application (development mode)
-$ python manage.py runserver # default port 8000
+$ python app.py # default port 8000
 $
 $ # Start the app - custom port
 $ # python manage.py runserver 0.0.0.0:<your_port>
 $
-$ # Access the web app in browser: http://127.0.0.1:5000/
+$ # Access the web app in browser: http://127.0.0.1:5000/inscription   http://127.0.0.1:5000/classifier 
+$ # And make requests
 ```
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/Ibmaria/Image-Classification-Web-Apps.git
-$ cd Image-Classification-Web-Apps/ImageRestApi
+$ git clone https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI.git
+$ cd From-Machine-Learning-Models-To-WebAPI/CustomerchurnAPI/web
 $
 $ # WITH DOCKER
 $ docker-compose build
 $ docker-compose up
 $
 $
-$ # Access the web api in browser: http://127.0.0.1:5000/ and make requests
+$ # Access the web app in browser: http://127.0.0.1:5000/inscription   http://127.0.0.1:5000/classifier 
+$ # And make requests
 ```
 
 
@@ -65,16 +64,9 @@ The project is coded using a simple and intuitive structure presented below:
 ```bash
 < PROJECT ROOT >
    |
-   |-- app_docker.py/                              
-   |--app.py
-   |--classify_image.py  
-   |--docker-compose.yml                      
-   |--Dockerfile              
-   |--requirements.txt
-   |--requirements_docker.txt  
-   |--INCEPTION.h5
+   |-- notebooks/                              
+   |--web/
    |--videoapp.gif
-   |--videoapp.mp4
    |
    |-- ************************************************************************
 ```
