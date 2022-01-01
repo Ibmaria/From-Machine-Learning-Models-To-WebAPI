@@ -25,11 +25,7 @@ $ # Install modules - SQLite Storage
 $ pip3 install -r requirements.txt or pip install -r requirements.txt
 
 $ # Start the application (development mode)
-$ python app.py # default port 8000
-$
-$ # Start the app - custom port
-$ # python manage.py runserver 0.0.0.0:<your_port>
-$
+$ python app.py # 
 $ # Access the web app in browser: http://127.0.0.1:5000/inscription   http://127.0.0.1:5000/classifier 
 $ # And make requests
 ```
