@@ -34,9 +34,8 @@ The project is coded using a simple and intuitive structure presented below:
 < PROJECT ROOT >
    |
    |-- CustomerchurnAPI/                              
-   |--Movierecommadation/
    |--Ecommerce-Customer-Purchase-Intention/
-   |
+   ||--Movierecommadation/
    |-- ************************************************************************
 ```
 
