@@ -1,0 +1,108 @@
+h2 {
+    text-align: center;
+  }
+  
+ 
+  
+  #input-row {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+  }
+  
+  .controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 52px !important;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  
+  }
+  .to_center {
+      display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 30px;
+    width: 200px;
+  }
+  #state,#account_length ,#area_code ,#international_plan ,#voice_mail_plan ,#number_vmail_messages
+  {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 6px;
+    padding: 0 11px 0 11px;
+    text-overflow: ellipsis;
+    width: 100% !important;
+    min-width: 18px ;
+    -webkit-appearance: none !important;
+  }
+  #state:focus, #account_length:focus, #area_code:focus, #international_plan:focus, #voice_mail_plan:focus, #number_vmail_messages:focus
+   {
+    border-color: #4d90fe;
+  }
+  
+  
+  #total_day_minutes,#total_day_calls,#total_day_charge,#total_eve_minutes,#total_eve_calls,#total_eve_charge
+  {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 6px;
+    padding: 0 11px 0 11px;
+    text-overflow: ellipsis;
+    width: 100% !important;
+    min-width: 18px ;
+    -webkit-appearance: none !important;
+  }
+  #total_day_minutes:focus,#total_day_calls:focus, #total_day_charge:focus, #total_eve_minutes:focus,#total_eve_calls:focus, #total_eve_charge:focus
+  {
+    border-color: #4d90fe;
+  }
+  #total_night_minutes,#total_night_calls,#total_night_charge,#total_intl_minutes,#total_intl_calls,#total_intl_charge,#number_customer_service_calls
+  {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 3px;
+    padding: 0 11px 0 11px;
+    text-overflow: ellipsis;
+    width: 100% !important;
+    min-width: 18px ;
+    -webkit-appearance: none !important;
+  }
+  #total_night_minutes:focus, #total_night_calls:focus, #total_night_charge:focus,#total_intl_minutes:focus, #total_intl_calls:focus, #total_intl_charge:focus, #number_customer_service_calls:focus
+  {
+    border-color: #4d90fe;
+  }
+ #get-churn {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 6px;
+    padding: 0 11px 0 11px;
+    width: 100% !important;
+    min-width: 35px ;
+  }
+  
+  
+  #churn-wrapper {
+    display: block;
+  }
+  
+  #churn{
+      text-align: center;
+    margin-top: 25px !important;
+  
+      margin-bottom: 8px !important;
+      padding: 8px 8px 8px 8px !important;
+      font-size: 18px;
+      font-weight: bold;
+  }

@@ -1,0 +1,181 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/alexcbs/image/upload/v1546012692/200px-Map_marker_font_awesome.svg_sspu3y.png" async defer/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="{% static 'Webapplication/css/index.css' %}" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js" integrity="sha256-VBLiveTKyUZMEzJd6z2mhfxIqz3ZATCuVMawPZGzIfA=" crossorigin="anonymous"></script>
+    <!--<script src="{% static 'js/index_js.js' %}"></script>-->
+
+    <!-- This links to the paid Google Maps Places API, replace the key parameter with your own -->
+     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8KxFgpLWTj3_gB3v0JdWELYX3S_h50Og&libraries=places&callback=initMap" async defer></script>-->
+
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdA3dnPEeRRckl6US1qatONk_UxpZHdSQ&libraries=places&callback=initMap" async defer></script>-->
+    <title>Customer Churn Prediction App</title>
+</head>
+
+
+<body>
+    
+    <h2>Customer Churn Prediction App</h2>
+    
+   
+    <div class="row" id="input-row">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="state" class="controls" type="text" placeholder="state"></input>
+        </div>
+         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="account_length" class="controls" type="number" placeholder="account_length"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="area_code" class="controls" type="text" placeholder="area_code"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="international_plan" class="controls" type="text" placeholder="international_plan"></input>
+        </div>
+        
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="voice_mail_plan" class="controls" type="text" placeholder="voice_mail_plan"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        <input id="number_vmail_messages" class="controls" type="number" placeholder="number_vmail_messages"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_day_minutes" class="controls" type="number" placeholder="total_day_minutes"></input>
+        </div>
+       
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_day_calls" class="controls" type="number" placeholder="total_day_calls"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_day_charge" class="controls" type="number" placeholder="total_day_charge"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        <input id="total_eve_minutes" class="controls" type="number" placeholder="total_eve_minutes"></input>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_eve_calls" class="controls" type="number" placeholder="total_eve_calls"></input>
+        </div>
+        
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_eve_charge" class="controls" type="number" placeholder="total_eve_charge"></input>
+        </div>
+       
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_night_minutes" class="controls" type="number" placeholder="total_night_minutes"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_night_calls" class="controls" type="number" placeholder="total_night_calls"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_night_charge" class="controls" type="number" placeholder="total_night_charge"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_intl_minutes" class="controls" type="number" placeholder="total_intl_minutes"></input>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_intl_calls" class="controls" type="number" placeholder="total_intl_calls"></input>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="total_intl_charge" class="controls" type="number" placeholder="total_intl_charge"></input>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+            <input id="number_customer_service_calls" class="controls" type="number" placeholder="number_customer_service_calls"></input>
+        </div>
+        
+        
+    
+        <div class="col-xs-12  col-sm-4 col-md-3 col-lg-3">
+            <button type="submit" class="controls btn btn-primary" id="get-churn">Predict</button>
+        </div>
+        
+        
+</div>
+
+<script type="text/javascript">
+       
+    $("#get-churn").click(function(){
+        
+        $.ajax({
+            type: "POST",
+            url:'{% url "predict_churn" %}',
+
+            data: {
+                'state' : $("#state").val(),
+                'account_length' : $("#account_length").val(),
+               'area_code': $("#area_code").val(),
+                'international_plan' :$("#international_plan").val(),
+                'voice_mail_plan' : $("#voice_mail_plan").val(),
+                'number_vmail_messages': $("#number_vmail_messages").val(),
+                'total_day_minutes': $("#total_day_minutes").val(),
+                'total_day_calls' : $("#total_day_calls").val(),
+
+                'total_day_charge' : $("#total_day_charge").val(),
+               'total_eve_minutes': $("#total_eve_minutes").val(),
+                'total_eve_calls' :$("#total_eve_calls").val(),
+                'total_eve_charge' : $("#total_eve_charge").val(),
+                'total_night_minutes': $("#total_night_minutes").val(),
+                'total_night_calls': $("#total_night_calls").val(),
+                'total_night_charge': $("#total_night_charge").val(),
+                'total_intl_minutes' : $("#total_intl_minutes").val(),
+                'total_intl_calls' : $("#total_intl_calls").val(),
+               'total_intl_charge': $("#total_intl_charge").val(),
+                'number_customer_service_calls' :$("#number_customer_service_calls").val(),
+            
+                csrfmiddlewaretoken: '{{ csrf_token }}'
+
+            
+            
+        },
+        
+            success: function(json){
+                
+                $('#churn').text(json['result'])
+
+            
+                
+            }
+    
+        
+        
+
+         })
+         
+        });
+
+        
+    
+
+</script>
+    
+           
+<div id="churn-wrapper">
+    <div class="alert alert-primary" role="alert" id="churn"></div>
+</div>
+    
+    
+
+
+
+
+
+
+    
+</body>
+
+</html>
