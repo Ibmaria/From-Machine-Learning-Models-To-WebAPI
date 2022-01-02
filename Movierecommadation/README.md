@@ -49,7 +49,7 @@ $ # Access the web app in browser: http://127.0.0.1:8000/projets/movie/
 
 
 ## Download Video App Here
-![App Video](https://github.com/Ibmaria/MovieRecommadationApp/blob/master/videoapp.gif)
+![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/Movierecommadation/videoapp.gif)
 
 
 ## Codebase structure
