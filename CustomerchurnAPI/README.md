@@ -52,6 +52,9 @@ $ # And make requests
 ## Download Video App Here
 ![App Video](https://github.com/Ibmaria/Image-Classification-Web-Apps/blob/master/ImageRestApi/videoapp.gif)
 
+## Customer Churn Api screenshot
+![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/CustomerchurnAPI/churnapp.PNG)
+
 
 ## Codebase structure
 
