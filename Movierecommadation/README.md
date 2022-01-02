@@ -10,8 +10,9 @@ Every time I go to a movie, it’s magic, no matter what the movie’s about.Ste
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/Ibmaria/MovieRecommadationApp.git
-$ cd MovieRecommadationApp
+$ git clone https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI.git
+$ cd From-Machine-Learning-Models-To-WebAPI/MovieRecommadation
+$ 
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
