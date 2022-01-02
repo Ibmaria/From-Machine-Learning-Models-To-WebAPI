@@ -23,15 +23,11 @@ def index_churn(request):
 
 def predict_churn(request):
     state = request.POST.get("state")
-    print(state)
     account_length = request.POST.get("account_length")
     account_length=int(account_length)
     area_code = request.POST.get("area_code")
-    print(area_code)
     international_plan = request.POST.get("international_plan")
-    print(international_plan)
     voice_mail_plan = request.POST.get("voice_mail_plan")
-    print(voice_mail_plan)
     number_vmail_messages = request.POST.get("number_vmail_messages")
     number_vmail_messages=int(number_vmail_messages)
     total_day_minutes= request.POST.get("total_day_minutes")
