@@ -13,8 +13,11 @@ A collection of Machine Learning Models To Web Api which are built on open sourc
 <br />
 
 
-## Customer Churn Api
+## Customer Churn Api video
 ![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/CustomerchurnAPI/videoapp.gif)
+
+## Customer Churn Api screenshot
+![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/CustomerchurnAPI/churnapp.PNG)
 
 
 # Movie recommadation
