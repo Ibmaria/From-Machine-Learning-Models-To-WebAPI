@@ -19,6 +19,8 @@ A collection of Machine Learning Models To Web Api which are built on open sourc
 ## Customer Churn Api screenshot
 ![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/CustomerchurnAPI/churnapp.PNG)
 
+## Ecommer Customer Purchase Intention Api screenshot
+![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/CustomerchurnAPI/churnapp.PNG)
 
 # Movie recommadation
 ![App Video](https://github.com/Ibmaria/From-Machine-Learning-Models-To-WebAPI/blob/master/Movierecommadation/videoapp.gif)
@@ -33,6 +35,7 @@ The project is coded using a simple and intuitive structure presented below:
    |
    |-- CustomerchurnAPI/                              
    |--Movierecommadation/
+   |--Ecommerce-Customer-Purchase-Intention/
    |
    |-- ************************************************************************
 ```
