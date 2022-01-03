@@ -35,6 +35,7 @@ The project is coded using a simple and intuitive structure presented below:
    |
    |-- CustomerchurnAPI/                              
    |--Ecommerce-Customer-Purchase-Intention/
+   |--Fake-And-Real-News-Dataset/
    ||--Movierecommadation/
    |-- ************************************************************************
 ```

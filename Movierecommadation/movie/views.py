@@ -66,32 +66,6 @@ def spam(request):
 def predict_movie(request):
 	
 	return render (request,"movie/resultats.html",context)
-    
-
-	# filename_ct = os.path.join(os.getcwd(),'essential_data.pkl')
-	# essential=pickle.load(open(filename_ct, 'rb'))
-	# movie_weights= essential['normalized_movies']
-	# index=essential['movie_to_idx']
-	# rindex=essential['index_movie']
-	# if request.method == 'POST':
-	# 	name= request.POST.get("name")
-	# 	print(name)
-	# 	if name not in  index:
-	# 		for j in index:
-	# 			if name in j:
-	# 				name = j
-	# 				break
-	# 	dists = np.dot(movie_weights, movie_weights[index[name.lower()]])
-	# 	n=10
-	# 	sorted_dists = np.argsort(dists)
-	# 	furthest = sorted_dists[:(n // 2)]
-	# 	closest = sorted_dists[-n-1: len(dists) - 1]
-	# 	items= [rindex[c] for c in closest]
-	# 	context={
-	# 		'movies':items,
-	# 		'title':name
-	# 		}
-	# 	return render (request,"resultats.html",context)
 	
     
 
